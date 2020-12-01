@@ -25,6 +25,18 @@ mvn clean install
 docker build -t zemberek-nlp-server .
 docker run -p 4567:4567 zemberek-nlp-server
 ```
+
+Docker compose örneği
+
+```yml
+version: '3.3'
+services:
+  zemberek-nlp-server:
+    ports:
+      - '4567:4567'
+    image: 'cbilgili/zemberek-nlp-server:latest'
+```
+
 Bunun ardından http://localhost:4567 üzerinden endpointlere erişebilirsiniz.
 
 ## Kullanım 
